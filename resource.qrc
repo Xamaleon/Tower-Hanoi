@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>img/exit.ico</file>
+        <file>img/record.ico</file>
+        <file>img/game.ico</file>
+        <file>img/fon.jpg</file>
+    </qresource>
+</RCC>

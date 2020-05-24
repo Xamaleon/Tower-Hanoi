@@ -1,0 +1,17 @@
+#ifndef SQUARE
+#define SQUARE
+
+#include <QObject>
+#include <QWidget>
+
+class square : public QWidget
+{
+     Q_OBJECT
+public:
+    explicit square(QWidget *parent = nullptr);
+
+signals:
+
+};
+
+#endif // SQUARE

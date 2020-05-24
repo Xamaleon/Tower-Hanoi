@@ -1,52 +1,59 @@
-# C++ objects and libs
-*.slo
-*.lo
-*.o
-*.a
-*.la
-*.lai
-*.so
-*.so.*
-*.dll
-*.dylib
 
-# Qt-es
-object_script.*.Release
-object_script.*.Debug
-*_plugin_import.cpp
-/.qmake.cache
-/.qmake.stash
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.obj
+;*.exe
+*.pdb
+*.user
 *.pro.user
 *.pro.user.*
-*.qbs.user
-*.qbs.user.*
-*.moc
-moc_*.cpp
-moc_*.h
-qrc_*.cpp
-ui_*.h
-*.qmlc
-*.jsc
-Makefile*
-*build-*
-*.qm
-*.prl
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+#*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.tlog
+;[Bb]in
+[Dd]ebug*/
+;*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+doc/
+*.rar
+*.arj
+*.arh
+*.scc
+*.ipch
+*.opensdf
+*.sdf
+*.opt
+*.plg
+*.vssscc
+*.cd
+*.tli
+*.crc
+#--- *.filters
+[Bb]uild-*
+.*
 
-# Qt unit tests
-target_wrapper.*
+ipch/
+Virtual/
+VSS_BD/
+__WPF__/
+Векторная графика/
 
-# QtCreator
 *.autosave
+pictures/log/*
 
-# QtCreator Qml
-*.qmlproject.user
-*.qmlproject.user.*
-
-# QtCreator CMake
-CMakeLists.txt.user*
-
-# QtCreator 4.8< compilation database 
-compile_commands.json
-
-# QtCreator local machine specific files for imported projects
-*creator.user*
