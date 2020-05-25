@@ -5,6 +5,7 @@
 #include "QStack"
 #include "QMessageBox"
 #include "QString"
+#include "QCloseEvent"
 
 MainWindow::MainWindow(QString playerName, QWidget *parent)
     : QMainWindow(parent)
@@ -31,14 +32,26 @@ MainWindow::MainWindow(QString playerName, QWidget *parent)
     scene->addRect(QRectF(T3, GROUND_Y, 260, 6));
 
     towers = new TowersKeeper(scene);
+
+    menu = new MainMenu();
+  //  connect(this, &MainWindow::showMenu, menu, &MainMenu::show);
+
+
+
+
 }
 
 MainWindow::~MainWindow()
 {
-    delete towers;
 
+
+    delete towers;
+    if(menu) delete menu;
     delete ui;
+
+
 }
+
 
 void MainWindow::on_exit_triggered()
 {
@@ -51,6 +64,7 @@ void MainWindow::on_firstToSecond_clicked()
         ui->lb_point->setNum(ui->lb_point->text().toInt()+1);
     }
     MessageInfo();
+
 }
 
 void MainWindow::on_firstToThird_clicked()
@@ -91,11 +105,14 @@ void MainWindow::MessageInfo()
     if(towers->isEndGame()){
         QMessageBox::StandardButton reply = QMessageBox::question(this,"Поздравляем!",QString(ui->lb_name->text()) + ", вы прошли игру.\nЖелаете начать новую игру?\n\nOK - Начать игру заново;\nClose - Вернуться в меню;",QMessageBox::Ok |QMessageBox::Close);
         if(reply == QMessageBox::Ok){
-            this->close();
-            parentWidget()->show();
+
+
+
         }
         else {
-            parentWidget()->show();
+
+
         }
     }
 }
+

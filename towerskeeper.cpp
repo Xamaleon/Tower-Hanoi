@@ -7,6 +7,7 @@ TowersKeeper::TowersKeeper(QGraphicsScene * scene)
 {
     this->scene = scene;
 
+
     for(int i = 0; i < 3; i++)
         towers.push_back(new std::stack<Shape*>());
 
@@ -40,6 +41,16 @@ bool TowersKeeper::isEndGame()
     }
     return false;
 }
+
+
+
+std::vector<std::stack<Shape *> *> TowersKeeper::vector()
+{
+    return towers;
+}
+
+
+
 
 bool TowersKeeper::move(Number from, Number to)
 {

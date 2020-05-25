@@ -20,6 +20,13 @@ public:
     MainWindow(QString playerName = "undefined", QWidget *parent = nullptr);
     ~MainWindow();
 
+signals:
+
+    // void showMenu();
+
+    void signalClose();
+
+
 private slots:
     void on_exit_triggered();
 
@@ -34,6 +41,10 @@ private slots:
     void on_thirdToFirst_clicked();
 
     void on_thirdToSecond_clicked();
+
+
+
+
 
 private:
     class MainMenu *menu;

@@ -15,13 +15,28 @@ public:
     explicit MainMenu(QWidget *parent = nullptr);
     ~MainMenu();
 
+
+
 private slots:
 
     void on_NewGame_clicked();
 
+
+signals:
+
+    void signalClose();
+
+
+public slots:
+
+
+
+
 private:
     Ui::MainMenu *ui;
-    MainWindow *win;
+    MainWindow *win = nullptr;
+
+
 };
 
 #endif // MAINMENU_H

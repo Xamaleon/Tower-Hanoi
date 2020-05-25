@@ -19,6 +19,8 @@ public:
     bool move(Number from, Number to);
     bool isEndGame();
 
+    std::vector<std::stack<Shape*>*> vector();
+
 private:
     std::vector<std::stack<Shape*>*> towers;
     QGraphicsScene * scene {nullptr};
