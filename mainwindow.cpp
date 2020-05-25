@@ -34,7 +34,7 @@ MainWindow::MainWindow(QString playerName, QWidget *parent)
     towers = new TowersKeeper(scene);
 
     menu = new MainMenu();
-  //  connect(this, &MainWindow::showMenu, menu, &MainMenu::show);
+    connect(this, &MainWindow::showMenu, menu, &MainMenu::show);
 
 
 
@@ -103,15 +103,15 @@ void MainWindow::on_thirdToSecond_clicked()
 void MainWindow::MessageInfo()
 {
     if(towers->isEndGame()){
-        QMessageBox::StandardButton reply = QMessageBox::question(this,"Поздравляем!",QString(ui->lb_name->text()) + ", вы прошли игру.\nЖелаете начать новую игру?\n\nOK - Начать игру заново;\nClose - Вернуться в меню;",QMessageBox::Ok |QMessageBox::Close);
+        QMessageBox::StandardButton reply = QMessageBox::question(this,"Поздравляем!",QString(ui->lb_name->text()) + ", вы прошли игру.\nЖелаете начать новую игру?\n\nOK - Вернуться в меню;\nClose - Выйти из игры;",QMessageBox::Ok |QMessageBox::Close);
+
         if(reply == QMessageBox::Ok){
 
-
-
+            this->close();
+            emit showMenu();
         }
         else {
-
-
+            this->close();
         }
     }
 }

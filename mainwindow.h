@@ -22,12 +22,14 @@ public:
 
 signals:
 
-    // void showMenu();
+    void showMenu();
 
-    void signalClose();
+public slots:
+
 
 
 private slots:
+
     void on_exit_triggered();
 
     void on_firstToSecond_clicked();

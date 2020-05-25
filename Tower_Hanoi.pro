@@ -45,4 +45,4 @@ else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/libs/QSerializer/bin/de
 
 INCLUDEPATH += $$PWD/libs/QSerializer/src
 DEPENDPATH += $$PWD/libs/QSerializer/src
-#DEFINES += QSERIALIZER_LIBRARY
+DEFINES += QSERIALIZER_LIBRARY

@@ -32,11 +32,12 @@ void MainMenu::on_NewGame_clicked()
     if(str.indexOf("")){
         this->close();
         win = new MainWindow(ui->PlayerName->text(), this);
-        connect(win, &MainWindow::signalClose, this, &MainMenu::show);
         win->show();
 
     }
 }
+
+
 
 
 
