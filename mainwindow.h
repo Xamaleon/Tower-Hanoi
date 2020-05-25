@@ -7,7 +7,7 @@
 #include <QGraphicsRectItem>
 #include <shape.h>
 #include <QStack>
-
+#include <qserializer.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
