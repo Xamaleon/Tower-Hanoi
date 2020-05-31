@@ -36,20 +36,13 @@ MainWindow::MainWindow(QString playerName, QWidget *parent)
     menu = new MainMenu();
     connect(this, &MainWindow::showMenu, menu, &MainMenu::show);
 
-
-
-
 }
 
 MainWindow::~MainWindow()
 {
-
-
     delete towers;
     if(menu) delete menu;
     delete ui;
-
-
 }
 
 
@@ -64,7 +57,6 @@ void MainWindow::on_firstToSecond_clicked()
         ui->lb_point->setNum(ui->lb_point->text().toInt()+1);
     }
     MessageInfo();
-
 }
 
 void MainWindow::on_firstToThird_clicked()

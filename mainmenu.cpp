@@ -7,12 +7,6 @@ MainMenu::MainMenu(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("Меню");
-
-
-
-
-
-
 }
 
 MainMenu::~MainMenu()
@@ -23,9 +17,6 @@ MainMenu::~MainMenu()
     delete ui;
 }
 
-
-
-
 void MainMenu::on_NewGame_clicked()
 {
     QStringList str = ui->PlayerName->text().split(" ");
@@ -33,7 +24,6 @@ void MainMenu::on_NewGame_clicked()
         this->close();
         win = new MainWindow(ui->PlayerName->text(), this);
         win->show();
-
     }
 }
 

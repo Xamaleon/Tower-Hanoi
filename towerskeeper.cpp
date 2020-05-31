@@ -42,16 +42,6 @@ bool TowersKeeper::isEndGame()
     return false;
 }
 
-
-
-std::vector<std::stack<Shape *> *> TowersKeeper::vector()
-{
-    return towers;
-}
-
-
-
-
 bool TowersKeeper::move(Number from, Number to)
 {
     std::stack<Shape*> * src = towers.at(from);
