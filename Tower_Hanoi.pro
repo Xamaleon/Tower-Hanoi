@@ -40,9 +40,3 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     resource.qrc
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/libs/QSerializer/bin/release/ -lQSerializer1
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/libs/QSerializer/bin/debug/ -lQSerializer1
-
-INCLUDEPATH += $$PWD/libs/QSerializer/src
-DEPENDPATH += $$PWD/libs/QSerializer/src
-#DEFINES += QSERIALIZER_LIBRARY
