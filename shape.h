@@ -38,10 +38,10 @@ public:
     Pos(int row = 0, int col = 0);
 
     ///\brief Конструктор копирования
-    Pos(const Pos & p){
-        this->row = p.row;
-        this->col = p.col;
-    }
+//    Pos(const Pos & p){
+//        this->row = p.row;
+//        this->col = p.col;
+//    }
 
     int getX(Size size);
     int getY();
